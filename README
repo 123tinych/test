@@ -1,5 +1,5 @@
 This is my test project!
-Just endless cyclic printing of random 0-10 real numbers with a time stamp.
-
+1.0 Just endless cyclic printing of random 0-10 real numbers with a time stamp.
+1.1 gen at start unical rand(10) and say every 5 sec with timestamp
 123tinych
 
