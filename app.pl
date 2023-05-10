@@ -1,9 +1,11 @@
 #!/usr/bin/env perl
  use POSIX;
- use feature 'say';
+# use feature 'say';
 
-$unical = rand(10);
+$i=1;
+$unical = int (10000*rand()) ."-" .int(10000*rand()) ."-" .int(10000*rand()) ."-" .int(10000*rand());
 while (1) {
-say strftime ("%Y-%m-%d %H:%M:%S", localtime time) . " " . $unical;
+print STDOUT ($i ." ". strftime ("%Y-%m-%d %H:%M:%S", localtime time) . " " . $unical . "\n");
+$i++;
 sleep(5);
 }

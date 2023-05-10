@@ -1,6 +1,10 @@
-FROM alpine
-#ENV TZ=Europe/Moscow
-#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+#worked version 
+#FROM ubuntu:18.04
+#RUN apt-get update -y
+#RUN apt-get install -y perl
+#RUN apt-get clean
+FROM perl:5.37.11-slim-threaded-bullseye
+
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
-CMD [ "sh", "./t1.sh" ]
+CMD [ "perl", "./app.pl" ]
