@@ -2,6 +2,7 @@
  use POSIX;
 # use feature 'say';
 
+$|=1; # for unbuffered output
 $i=1;
 $unical = int (10000*rand()) ."-" .int(10000*rand()) ."-" .int(10000*rand()) ."-" .int(10000*rand());
 while (1) {
