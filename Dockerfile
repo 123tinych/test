@@ -1,10 +1,6 @@
-#worked version 
-#FROM ubuntu:18.04
-#RUN apt-get update -y
-#RUN apt-get install -y perl
-#RUN apt-get clean
-FROM perl:5.37.11-slim-threaded-bullseye
-
+FROM alpine
+ENV TZ=Europe/Moscow
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
-CMD [ "perl", "./app.pl" ]
+CMD ./t1.sh
